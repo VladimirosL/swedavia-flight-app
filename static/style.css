@@ -1,0 +1,237 @@
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f3e6c8;
+    color: #382f27;
+}
+
+
+/* ---------- TITLE ---------- */
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 35px;
+
+    color: #b5422e;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------- SEARCH FORM ---------- */
+
+#flight-form {
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+
+    background-color: #fff7e5;
+
+    padding: 25px 30px;
+
+    border: 3px solid #d4a72c;
+    border-radius: 14px;
+
+    box-shadow: 6px 6px 0 #c75b39;
+
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+
+/* ---------- LABELS ---------- */
+
+label {
+    font-weight: bold;
+    color: #7b3828;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+input {
+    padding: 11px 14px;
+
+    border: 2px solid #c9a66b;
+    border-radius: 7px;
+
+    background-color: #fffdf6;
+
+    font-size: 16px;
+
+    color: #382f27;
+}
+
+input:focus {
+    outline: none;
+    border-color: #c75b39;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #c75b39;
+    color: #fff8e7;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #a83e29;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 0 #d4a72c;
+}
+
+
+/* Make arrivals button yellow */
+
+#arrivals {
+    background-color: #d4a72c;
+    color: #382f27;
+}
+
+#arrivals:hover {
+    background-color: #c2941e;
+    box-shadow: 0 4px 0 #c75b39;
+}
+
+
+/* ---------- RESULTS ---------- */
+
+#results {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#results h2 {
+    margin-bottom: 5px;
+
+    color: #b5422e;
+
+    text-transform: capitalize;
+}
+
+#results p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #776657;
+}
+
+
+/* ---------- TABLE ---------- */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: #fffaf0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 5px 5px 0 #d4a72c;
+}
+
+
+/* Table header */
+
+thead {
+    background-color: #b5422e;
+    color: #fff8e7;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* Table rows */
+
+td {
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #e4d4b7;
+}
+
+
+/* Alternating rows */
+
+tbody tr:nth-child(even) {
+    background-color: #f7ecd7;
+}
+
+
+/* Hover over flight */
+
+tbody tr:hover {
+    background-color: #f3dca6;
+}
+
+
+/* Make flight number stand out */
+
+td:nth-child(2) {
+    font-weight: bold;
+    color: #b5422e;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 20px;
+    }
+
+    #flight-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    #results {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 750px;
+    }
+}

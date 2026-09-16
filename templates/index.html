@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swedavia Flight Tracker</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+
+    <h1>✈ Swedavia Flight Tracker</h1>
+
+    <form id="flight-form">
+
+        <label for="airport">Airport</label>
+        <input
+            type="text"
+            id="airport"
+            placeholder="ARN"
+            maxlength="3"
+            required
+        >
+
+        <label for="date">Date</label>
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <button type="button" id="departures">
+            Departures
+        </button>
+
+        <button type="button" id="arrivals">
+            Arrivals
+        </button>
+
+    </form>
+
+    <div id="results"></div>
+
+</body>
+</html>
